@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' https://i.ytimg.com; frame-src https://www.youtube-nocookie.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Bruno Henrique Tech — Carreira em TI, SRE e tecnologia sem mistério</title>
+  <meta name="description" content="Blog e portfólio do Bruno Henrique, Desenvolvedor SRE e criador de conteúdo sobre carreira em TI, currículo, LinkedIn e áreas da tecnologia.">
+  <meta name="theme-color" content="#0b1119">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Bruno Henrique Tech">
+  <meta property="og:description" content="Carreira em tecnologia, sem mistério. Vídeos, textos e projetos sobre TI para quem está começando.">
+  <meta property="og:image" content="assets/img/avatar.jpg">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme-init.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/home.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Bruno Henrique Tech — início">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="25" height="17" rx="3"/><path d="M16 22v4.5M10.5 26.5h11M13.2 12.6l5.4-2.7M13.2 14.4l5.4 2.7"/><circle cx="20" cy="9.2" r="1.9" fill="currentColor"/><circle cx="12" cy="13.5" r="1.9" fill="currentColor"/><circle cx="20" cy="17.8" r="1.9" fill="currentColor"/></svg>
+        <span>bruno<span class="brand-accent">henrique</span>.tech</span>
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="Principal">
+        <ul>
+          <li><a href="index.html#videos">Vídeos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html#portfolio">Portfólio</a></li>
+          <li><a href="index.html#sobre">Sobre</a></li>
+          <li><a href="index.html#contato">Contato</a></li>
+          <li><a class="nav-cta" href="apoie.html">Apoie <span aria-hidden="true">☕</span></a></li>
+        </ul>
+      </nav>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Tema claro" aria-pressed="false">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Desenvolvedor SRE · Criador de conteúdo</p>
+        <h1 id="hero-title">Carreira em tecnologia, <em>sem mistério</em>.</h1>
+        <p class="lead">Eu sou o Bruno Henrique. Trabalho como Desenvolvedor SRE e uso o YouTube, o Instagram e este blog para mostrar, de forma simples e direta, como é a vida real de quem trabalha com TI — do currículo à produção.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://youtube.com/@obrunohenriquetech" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.75 15.02V8.98L15.5 12l-5.75 3.02Z"/></svg>
+            Assistir no YouTube
+          </a>
+          <a class="btn btn-ghost" href="blog.html">Ler o blog →</a>
+        </div>
+      </div>
+
+      <figure class="terminal" aria-label="Painel de status dos meus canais">
+        <div class="terminal-bar" aria-hidden="true"><span></span><span></span><span></span><p class="terminal-title">status.sh</p></div>
+        <div class="terminal-body">
+          <p><span class="prompt">bruno@tech:~$</span> <span data-typed>status --canais</span><span class="caret" aria-hidden="true"></span></p>
+          <ul class="status-list">
+            <li class="status-row"><span class="dot" aria-hidden="true"></span><span class="status-name">youtube</span><span class="status-state">operacional</span><span class="status-note">vídeos e shorts sobre carreira em TI</span></li>
+            <li class="status-row"><span class="dot" aria-hidden="true"></span><span class="status-name">instagram</span><span class="status-state">operacional</span><span class="status-note">dicas rápidas e bastidores</span></li>
+            <li class="status-row"><span class="dot" aria-hidden="true"></span><span class="status-name">blog</span><span class="status-state">operacional</span><span class="status-note">textos para ir mais fundo</span></li>
+          </ul>
+          <p class="terminal-foot">uptime: aprendendo todo dia · incidentes: 0 desistências</p>
+        </div>
+      </figure>
+    </section>
+
+    <section class="topics" aria-label="Assuntos que eu abordo">
+      <ul class="container topic-list">
+        <li>#carreira-em-ti</li>
+        <li>#currículo</li>
+        <li>#ats</li>
+        <li>#linkedin</li>
+        <li>#áreas-da-ti</li>
+        <li>#sre</li>
+        <li>#dados</li>
+        <li>#segurança</li>
+        <li>#saúde-mental</li>
+      </ul>
+    </section>
+
+    <section class="section container" id="temas" aria-labelledby="temas-title">
+      <header class="section-head">
+        <p class="kicker">temas</p>
+        <h2 id="temas-title">Sobre o que eu falo</h2>
+        <p class="section-intro">Conteúdo para quem quer entrar, se manter e crescer na tecnologia. Sem fórmula mágica, com o pé no dia a dia.</p>
+      </header>
+      <ol class="pillars">
+        <li class="pillar">
+          <span class="pillar-index">/01</span>
+          <h3>Carreira em TI</h3>
+          <p>Como é a área de verdade, aprendizado constante, expectativas realistas e o cuidado com a saúde mental no caminho.</p>
+        </li>
+        <li class="pillar">
+          <span class="pillar-index">/02</span>
+          <h3>Currículo &amp; LinkedIn</h3>
+          <p>ATS, erros que eliminam candidatos, perfil que gera entrevistas e um modelo de currículo gratuito.</p>
+        </li>
+        <li class="pillar">
+          <span class="pillar-index">/03</span>
+          <h3>Áreas da tecnologia</h3>
+          <p>Dados, segurança da informação, infraestrutura e as funções que nem exigem programar.</p>
+        </li>
+        <li class="pillar">
+          <span class="pillar-index">/04</span>
+          <h3>Bastidores de SRE</h3>
+          <p>Confiabilidade, incidentes, automação e o trabalho de quem mantém os sistemas no ar.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="videos" aria-labelledby="videos-title">
+      <div class="container">
+        <header class="section-head section-head-row">
+          <div>
+            <p class="kicker">vídeos</p>
+            <h2 id="videos-title">Direto do canal</h2>
+          </div>
+          <a class="link-arrow" href="https://youtube.com/@obrunohenriquetech/videos" target="_blank" rel="noopener">Ver canal completo →</a>
+        </header>
+
+        <div id="featured-videos" class="featured-videos"></div>
+
+        <div class="shorts">
+          <div class="shorts-head">
+            <h3>Shorts</h3>
+            <div id="shorts-filter" class="chip-group" role="group" aria-label="Filtrar shorts por tema"></div>
+          </div>
+          <p id="shorts-status" class="sr-only" aria-live="polite"></p>
+          <ul id="shorts-rail" class="shorts-rail"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="blog" aria-labelledby="blog-title">
+      <header class="section-head section-head-row">
+        <div>
+          <p class="kicker">blog</p>
+          <h2 id="blog-title">Textos recentes</h2>
+        </div>
+        <a class="link-arrow" href="blog.html">Todos os textos →</a>
+      </header>
+      <ul id="latest-posts" class="post-grid"></ul>
+    </section>
+
+    <section class="section container" id="portfolio" aria-labelledby="portfolio-title">
+      <header class="section-head">
+        <p class="kicker">portfólio</p>
+        <h2 id="portfolio-title">Projetos &amp; séries</h2>
+        <p class="section-intro">O que eu ando construindo — dentro e fora das câmeras.</p>
+      </header>
+      <ul id="projects" class="project-grid"></ul>
+      <div class="toolbox">
+        <h3>Caixa de ferramentas</h3>
+        <ul id="toolbox" class="tool-list" aria-label="Tecnologias que uso no dia a dia"></ul>
+      </div>
+    </section>
+
+    <section class="section container about" id="sobre" aria-labelledby="sobre-title">
+      <figure class="about-figure">
+        <img src="assets/img/avatar.jpg" width="400" height="400" loading="lazy" alt="Logotipo Bruno Henrique Tech: um monitor azul com o ícone de compartilhar.">
+      </figure>
+      <div class="about-text">
+        <p class="kicker">sobre</p>
+        <h2 id="sobre-title">Prazer, Bruno Henrique.</h2>
+        <p>Sou Desenvolvedor SRE — a pessoa que cuida para que os sistemas continuem de pé, rápidos e confiáveis. Criei o canal para compartilhar conhecimento e estudos de um jeito claro, voltado para o dia a dia de quem trabalha com tecnologia.</p>
+        <p>Meu foco é ajudar quem está chegando: entender as áreas, montar um currículo que passa nos filtros e ter uma visão realista da carreira, sem promessas milagrosas.</p>
+        <dl class="facts">
+          <div class="fact"><dt>Hoje</dt><dd>Desenvolvedor SRE</dd></div>
+          <div class="fact"><dt>Missão</dt><dd>Descomplicar a entrada em TI</dd></div>
+          <div class="fact"><dt>Onde</dt><dd>YouTube, Instagram e aqui</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section contact" id="contato" aria-labelledby="contato-title">
+      <div class="container contact-grid">
+        <div class="section-head">
+          <p class="kicker">contato</p>
+          <h2 id="contato-title">Bora trocar uma ideia?</h2>
+          <p class="section-intro">Parcerias, sugestões de vídeo, convites para bate-papos ou dúvidas sobre carreira: meu e-mail está sempre aberto.</p>
+          <div class="contact-email">
+            <a class="email-link" href="#contato" data-email data-email-text>obrunohenriquetech [arroba] gmail.com</a>
+            <button class="btn btn-ghost" type="button" data-copy="" data-copy-email data-copy-label="E-mail copiado!" aria-describedby="copy-status">Copiar e-mail</button>
+            <span id="copy-status" class="copy-status" role="status"></span>
+          </div>
+        </div>
+        <div class="social-panel">
+          <h3>Me encontre nas redes</h3>
+          <ul class="social-links social-links--lg" aria-label="Redes sociais">
+            <li><a class="social-link social-link--youtube" href="https://youtube.com/@obrunohenriquetech" target="_blank" rel="me noopener" aria-label="YouTube: @obrunohenriquetech" data-label="YouTube"><svg aria-hidden="true"><use href="assets/img/icons.svg#icon-youtube"/></svg></a></li>
+            <li><a class="social-link social-link--instagram" href="https://instagram.com/brunohenriquetech" target="_blank" rel="me noopener" aria-label="Instagram: @brunohenriquetech" data-label="Instagram"><svg aria-hidden="true"><use href="assets/img/icons.svg#icon-instagram"/></svg></a></li>
+            <li><a class="social-link social-link--threads" href="https://threads.com/@brunohenriquetech" target="_blank" rel="me noopener" aria-label="Threads: @brunohenriquetech" data-label="Threads"><svg aria-hidden="true"><use href="assets/img/icons.svg#icon-threads"/></svg></a></li>
+            <li><a class="social-link social-link--linkedin" href="https://linkedin.com/in/bruno-henrique-cavalcante" target="_blank" rel="me noopener" aria-label="LinkedIn: Bruno Henrique Cavalcante" data-label="LinkedIn"><svg aria-hidden="true"><use href="assets/img/icons.svg#icon-linkedin"/></svg></a></li>
+            <li><a class="social-link social-link--github" href="https://github.com/brunohcs" target="_blank" rel="me noopener" aria-label="GitHub: @brunohcs" data-label="GitHub"><svg aria-hidden="true"><use href="assets/img/icons.svg#icon-github"/></svg></a></li>
+            <li><a class="social-link" href="#contato" data-email aria-label="Enviar e-mail" data-label="E-mail"><svg aria-hidden="true"><use href="assets/img/icons.svg#icon-email"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-year>2026</span> Bruno Henrique Tech · Feito com HTML, CSS e JavaScript.</p>
+      <p class="mono">status: <span class="ok-text">todos os sistemas operacionais</span></p>
+    </div>
+  </footer>
+
+  <template id="tpl-video-long">
+    <article class="video-long">
+      <a class="video-link" target="_blank" rel="noopener">
+        <div class="video-thumb"><img width="480" height="360" loading="lazy" alt=""><span class="play" aria-hidden="true"></span></div>
+        <div class="video-meta">
+          <p class="video-topic"></p>
+          <h3 class="video-title"></h3>
+          <p class="video-desc"></p>
+        </div>
+      </a>
+    </article>
+  </template>
+
+  <template id="tpl-video-short">
+    <li class="short-card">
+      <a class="video-link" target="_blank" rel="noopener">
+        <div class="video-thumb"><img width="202" height="360" loading="lazy" alt=""></div>
+        <p class="video-topic"></p>
+        <h4 class="video-title"></h4>
+      </a>
+    </li>
+  </template>
+
+  <template id="tpl-post">
+    <li class="post-card">
+      <p class="post-meta"><time></time> · <span class="post-reading"></span></p>
+      <h3><a class="card-link"></a></h3>
+      <p class="post-excerpt"></p>
+      <ul class="tag-list" aria-label="Tags"></ul>
+    </li>
+  </template>
+
+  <template id="tpl-project">
+    <li class="project-card">
+      <p class="project-kind"></p>
+      <h3><a class="card-link" target="_blank" rel="noopener"></a></h3>
+      <p class="project-desc"></p>
+      <span class="project-cta" aria-hidden="true"></span>
+    </li>
+  </template>
+</body>
+</html>

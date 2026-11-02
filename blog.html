@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' https://i.ytimg.com; frame-src https://www.youtube-nocookie.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Blog — Bruno Henrique Tech</title>
+  <meta name="description" content="Textos sobre carreira em TI, currículo, LinkedIn, áreas da tecnologia e bastidores de SRE.">
+  <meta name="theme-color" content="#0b1119">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Blog — Bruno Henrique Tech">
+  <meta property="og:description" content="Textos para ir mais fundo nos assuntos dos vídeos.">
+  <meta property="og:image" content="assets/img/avatar.jpg">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme-init.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/blog.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Bruno Henrique Tech — início">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="25" height="17" rx="3"/><path d="M16 22v4.5M10.5 26.5h11M13.2 12.6l5.4-2.7M13.2 14.4l5.4 2.7"/><circle cx="20" cy="9.2" r="1.9" fill="currentColor"/><circle cx="12" cy="13.5" r="1.9" fill="currentColor"/><circle cx="20" cy="17.8" r="1.9" fill="currentColor"/></svg>
+        <span>bruno<span class="brand-accent">henrique</span>.tech</span>
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="Principal">
+        <ul>
+          <li><a href="index.html#videos">Vídeos</a></li>
+          <li><a href="blog.html" aria-current="page">Blog</a></li>
+          <li><a href="index.html#portfolio">Portfólio</a></li>
+          <li><a href="index.html#sobre">Sobre</a></li>
+          <li><a href="index.html#contato">Contato</a></li>
+          <li><a class="nav-cta" href="apoie.html">Apoie <span aria-hidden="true">☕</span></a></li>
+        </ul>
+      </nav>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Tema claro" aria-pressed="false">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo" class="container">
+    <header class="page-hero">
+      <p class="kicker">blog</p>
+      <h1>Textos para ir mais fundo.</h1>
+      <p class="lead">O vídeo dá o recado em poucos minutos. Aqui eu desenvolvo com calma: passo a passo, exemplos e links úteis.</p>
+    </header>
+
+    <section class="blog-tools" aria-label="Filtros do blog">
+      <div class="search-field">
+        <label for="post-search">Buscar texto</label>
+        <input id="post-search" type="search" placeholder="Ex.: currículo, SRE, dados…" autocomplete="off">
+      </div>
+      <div id="tag-filter" class="chip-group" role="group" aria-label="Filtrar por tema"></div>
+      <p id="results-count" class="results-count" role="status" aria-live="polite"></p>
+    </section>
+
+    <ul id="post-list" class="post-grid blog-list" aria-label="Lista de textos"></ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-year>2026</span> Bruno Henrique Tech · Feito com HTML, CSS e JavaScript.</p>
+      <p class="mono">status: <span class="ok-text">todos os sistemas operacionais</span></p>
+    </div>
+  </footer>
+
+  <template id="tpl-post">
+    <li class="post-card">
+      <p class="post-meta"><time></time> · <span class="post-reading"></span></p>
+      <h2 class="post-card-title"><a class="card-link"></a></h2>
+      <p class="post-excerpt"></p>
+      <ul class="tag-list" aria-label="Tags"></ul>
+    </li>
+  </template>
+</body>
+</html>

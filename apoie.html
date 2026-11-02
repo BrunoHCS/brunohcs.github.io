@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' https://i.ytimg.com; frame-src https://www.youtube-nocookie.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Apoie — Bruno Henrique Tech</title>
+  <meta name="description" content="Apoie o Bruno Henrique Tech via Pix e ajude a manter conteúdo gratuito sobre carreira em TI.">
+  <meta name="theme-color" content="#0b1119">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Apoie o Bruno Henrique Tech">
+  <meta property="og:description" content="Ajude a manter conteúdo gratuito sobre carreira em TI.">
+  <meta property="og:image" content="assets/img/avatar.jpg">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme-init.js"></script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Bruno Henrique Tech — início">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="25" height="17" rx="3"/><path d="M16 22v4.5M10.5 26.5h11M13.2 12.6l5.4-2.7M13.2 14.4l5.4 2.7"/><circle cx="20" cy="9.2" r="1.9" fill="currentColor"/><circle cx="12" cy="13.5" r="1.9" fill="currentColor"/><circle cx="20" cy="17.8" r="1.9" fill="currentColor"/></svg>
+        <span>bruno<span class="brand-accent">henrique</span>.tech</span>
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="Principal">
+        <ul>
+          <li><a href="index.html#videos">Vídeos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html#portfolio">Portfólio</a></li>
+          <li><a href="index.html#sobre">Sobre</a></li>
+          <li><a href="index.html#contato">Contato</a></li>
+          <li><a class="nav-cta" href="apoie.html" aria-current="page">Apoie <span aria-hidden="true">☕</span></a></li>
+        </ul>
+      </nav>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Tema claro" aria-pressed="false">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo" class="container">
+    <header class="page-hero">
+      <p class="kicker">apoie</p>
+      <h1>Ajude a manter o conteúdo no ar.</h1>
+      <p class="lead">Tudo o que eu publico é gratuito. Se algum vídeo ou texto te ajudou a dar um passo na carreira, você pode retribuir com um café — qualquer valor faz diferença.</p>
+    </header>
+
+    <div class="support-grid">
+      <section class="support-card support-card--pix" aria-labelledby="pix-title">
+        <h2 id="pix-title">Apoie via Pix</h2>
+        <p class="section-intro">Aponte a câmera do app do seu banco para o QR Code ou copie a chave.</p>
+
+        <!--
+          PIX — como preencher:
+          1. Salve a imagem do QR Code em assets/img/pix-qrcode.png
+          2. Apague o <div class="pix-qr pix-qr--placeholder"> e descomente o <img> logo abaixo dele.
+          3. Troque [SUA CHAVE PIX] nos DOIS lugares (data-copy do botão e texto do <code>).
+          Dica: prefira chave aleatória ou e-mail; evite expor CPF ou telefone.
+        -->
+        <div class="pix-qr pix-qr--placeholder" role="img" aria-label="QR Code do Pix (em breve)">
+          <span>QR Code<br>em breve</span>
+        </div>
+        <!-- <img class="pix-qr" src="assets/img/pix-qrcode.png" width="240" height="240" alt="QR Code para apoiar via Pix"> -->
+
+        <div class="pix-key">
+          <p class="pix-key-label">Chave Pix</p>
+          <code id="pix-key">[SUA CHAVE PIX]</code>
+          <button class="btn btn-primary" type="button" data-copy="[SUA CHAVE PIX]" data-copy-label="Chave Pix copiada!" aria-describedby="pix-copy-status">Copiar chave Pix</button>
+          <span id="pix-copy-status" class="copy-status" role="status"></span>
+        </div>
+
+        <div class="pix-check" role="note" aria-labelledby="pix-check-title">
+          <p id="pix-check-title" class="pix-check-title">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m8.8 12.2 2.2 2.2 4.2-4.4"/></svg>
+            Antes de confirmar, confira o recebedor
+          </p>
+          <p>No app do seu banco, o nome deve aparecer como <strong>Bruno Henrique C. da S.</strong> — com o sobrenome completo, que eu prefiro não exibir aqui.</p>
+          <p class="pix-check-note">Nome diferente? Não conclua o pagamento: pode ser uma cópia falsa deste site. Na dúvida, me chame no Instagram <a href="https://instagram.com/brunohenriquetech" target="_blank" rel="noopener">@brunohenriquetech</a> para confirmar a chave.</p>
+        </div>
+      </section>
+
+      <section class="support-card" aria-labelledby="destino-title">
+        <h2 id="destino-title">Para onde vai o apoio</h2>
+        <ul class="support-list">
+          <li><strong>Equipamento:</strong> microfone, câmera e iluminação para vídeos melhores.</li>
+          <li><strong>Ferramentas:</strong> edição, design e hospedagem dos materiais gratuitos.</li>
+          <li><strong>Tempo:</strong> mais horas para pesquisar, roteirizar e responder dúvidas.</li>
+        </ul>
+
+        <h2 id="gratis-title">Sem grana agora? Também ajuda muito</h2>
+        <p class="section-intro">Se inscrever, comentar e compartilhar com quem está começando em TI faz o conteúdo chegar a mais gente.</p>
+        <ul class="social-links" aria-labelledby="gratis-title">
+          <li><a class="social-link social-link--youtube" href="https://youtube.com/@obrunohenriquetech?sub_confirmation=1" target="_blank" rel="noopener" aria-label="Inscrever-se no YouTube" data-label="YouTube"><svg aria-hidden="true"><use href="assets/img/icons.svg#icon-youtube"/></svg></a></li>
+          <li><a class="social-link social-link--instagram" href="https://instagram.com/brunohenriquetech" target="_blank" rel="noopener" aria-label="Instagram: @brunohenriquetech" data-label="Instagram"><svg aria-hidden="true"><use href="assets/img/icons.svg#icon-instagram"/></svg></a></li>
+          <li><a class="social-link social-link--threads" href="https://threads.com/@brunohenriquetech" target="_blank" rel="noopener" aria-label="Threads: @brunohenriquetech" data-label="Threads"><svg aria-hidden="true"><use href="assets/img/icons.svg#icon-threads"/></svg></a></li>
+          <li><a class="social-link social-link--linkedin" href="https://linkedin.com/in/bruno-henrique-cavalcante" target="_blank" rel="noopener" aria-label="LinkedIn: Bruno Henrique Cavalcante" data-label="LinkedIn"><svg aria-hidden="true"><use href="assets/img/icons.svg#icon-linkedin"/></svg></a></li>
+          <li><a class="social-link social-link--github" href="https://github.com/brunohcs" target="_blank" rel="noopener" aria-label="GitHub: @brunohcs" data-label="GitHub"><svg aria-hidden="true"><use href="assets/img/icons.svg#icon-github"/></svg></a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-year>2026</span> Bruno Henrique Tech · Feito com HTML, CSS e JavaScript.</p>
+      <p class="mono">status: <span class="ok-text">todos os sistemas operacionais</span></p>
+    </div>
+  </footer>
+</body>
+</html>
