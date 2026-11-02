@@ -12,6 +12,8 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="O que faz um SRE (e por que não é só “o cara do servidor”)">
   <meta property="og:description" content="SLI, SLO, error budget e incidentes explicados sem jargão.">
+  <link rel="canonical" href="https://brunohcs.github.io/posts/o-que-faz-um-sre.html">
+  <meta property="og:url" content="https://brunohcs.github.io/posts/o-que-faz-um-sre.html">
   <meta property="og:image" content="https://i.ytimg.com/vi/tFWv_Ugxux8/hqdefault.jpg">
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/fonts.css">
@@ -19,6 +21,7 @@
   <script src="../js/theme-init.js"></script>
   <script type="module" src="../js/main.js"></script>
   <script type="module" src="../js/embed.js"></script>
+  <script type="module" src="../js/share-post.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -108,6 +111,10 @@
           <li><strong>Observabilidade</strong> — Prometheus, Grafana e OpenTelemetry são ótimos pontos de partida.</li>
         </ol>
         <p>Muita gente chega em SRE vindo de desenvolvimento, suporte ou infraestrutura. Você não precisa saber tudo antes da primeira vaga — precisa ter base, curiosidade e vontade de resolver problemas.</p>
+        <div class="share-post-wrap">
+          <button class="share-post" type="button" aria-describedby="share-post-status">Compartilhar este texto</button>
+          <span class="share-post-status" id="share-post-status" role="status" aria-live="polite"></span>
+        </div>
       </div>
 
       <aside class="post-footer" aria-labelledby="cta-title">

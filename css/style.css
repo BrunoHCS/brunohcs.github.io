@@ -966,6 +966,42 @@ ol[class] {
   border-radius: var(--radius-pill);
 }
 
+.share-post {
+  align-self: flex-start;
+  padding: 0.55rem 0.85rem;
+  color: var(--color-text);
+  font: inherit;
+  font-size: var(--step--1);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: border-color var(--duration), color var(--duration), background var(--duration);
+}
+
+.share-post:hover,
+.share-post:focus-visible {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.share-post:disabled {
+  cursor: wait;
+  opacity: 0.75;
+}
+
+.share-post-wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.share-post-status {
+  color: var(--color-muted);
+  font-size: var(--step--1);
+}
+
 .project-grid {
   display: grid;
   gap: var(--space-4);
