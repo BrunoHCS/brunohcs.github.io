@@ -32,14 +32,15 @@ export const projects = [
 ];
 
 export const toolbox = [
+  '.NET',
+  'C#',
+  'SQL Server',
+  'PostgreSQL',
   'Linux',
   'Git',
+  'n8n',
   'Docker',
-  'Kubernetes',
   'CI/CD',
   'Cloud',
   'Observabilidade',
-  'Infra como código',
-  'Python',
-  'Shell Script',
 ];
