@@ -4,6 +4,7 @@
   1. Copie este arquivo para posts/<slug>.html (ex.: posts/meu-primeiro-deploy.html).
   2. Troque tudo que estiver entre [COLCHETES].
   3. Adicione a entrada correspondente em js/data/posts.js (mesmo slug).
+  4. Se o post oferecer arquivos, ajuste a seção de downloads e salve-os em assets/downloads/.
   Arquivos que começam com "_" não são publicados pelo GitHub Pages.
 -->
 <html lang="pt-BR" data-theme="dark">
@@ -37,7 +38,7 @@
     <div class="container header-inner">
       <a class="brand" href="../index.html" aria-label="Bruno Henrique Tech — início">
         <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="25" height="17" rx="3"/><path d="M16 22v4.5M10.5 26.5h11M13.2 12.6l5.4-2.7M13.2 14.4l5.4 2.7"/><circle cx="20" cy="9.2" r="1.9" fill="currentColor"/><circle cx="12" cy="13.5" r="1.9" fill="currentColor"/><circle cx="20" cy="17.8" r="1.9" fill="currentColor"/></svg>
-        <span>bruno<span class="brand-accent">henrique</span>.tech</span>
+        <span>bruno<span class="brand-accent">henrique</span>tech</span>
       </a>
       <nav id="site-nav" class="site-nav" aria-label="Principal">
         <ul>
@@ -86,6 +87,14 @@
           </div>
           <figcaption class="embed-caption">Short: <a href="https://www.youtube.com/shorts/[ID_DO_VIDEO]" target="_blank" rel="noopener">[TÍTULO DO VÍDEO]</a></figcaption>
         </figure>
+
+        <h2>Arquivos para download</h2>
+        <p>[Explique brevemente o que os arquivos oferecem.]</p>
+        <ul>
+          <li><a href="../assets/downloads/[NOME-DO-ARQUIVO-1.pdf]" download>⬇ Baixar [nome do arquivo 1] (PDF)</a></li>
+          <li><a href="../assets/downloads/[NOME-DO-ARQUIVO-2.pdf]" download>⬇ Baixar [nome do arquivo 2] (PDF)</a></li>
+        </ul>
+
         <div class="share-post-wrap">
           <button class="share-post" type="button" aria-describedby="share-post-status">Compartilhar este texto</button>
           <span class="share-post-status" id="share-post-status" role="status" aria-live="polite"></span>
@@ -108,7 +117,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span data-year>2026</span> Bruno Henrique Tech · Feito com HTML, CSS e JavaScript.</p>
+      <p>© <span data-year>2026</span> Bruno Henrique Tech</p>
       <p class="mono">status: <span class="ok-text">todos os sistemas operacionais</span></p>
     </div>
   </footer>
