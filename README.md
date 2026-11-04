@@ -9,6 +9,7 @@ Site pessoal (blog + portfólio) feito só com **HTML, CSS e JavaScript**, sem f
 | `index.html`          | Home: hero, temas, vídeos, posts recentes, portfólio, sobre e contato |
 | `blog.html`           | Lista de posts com busca e filtro por tag                             |
 | `apoie.html`          | Página de apoio via Pix (QR Code + chave)                             |
+| `privacidade.html`    | Política de privacidade do site                                        |
 | `posts/*.html`        | Um arquivo por post (`posts/_modelo.html` é o modelo)                 |
 | `404.html`            | Página de erro (o GitHub Pages usa automaticamente)                   |
 | `css/style.css`       | Estilos e tokens de design (cores, fontes, espaçamentos)              |
@@ -93,13 +94,20 @@ As cores ficam em `css/style.css`, nos blocos `[data-theme='dark']` e `[data-the
 
 **Já aplicado no código**
 
-- CSP (`<meta http-equiv="Content-Security-Policy">`) e `Referrer-Policy` em todas as páginas.
+- `Referrer-Policy` nas páginas e cabeçalhos adicionais em `_headers` para hospedagens que suportam esse formato (GitHub Pages ignora `_headers`).
 - Fontes locais — nenhum recurso de terceiros além de miniaturas (`i.ytimg.com`) e player do YouTube (`youtube-nocookie.com`).
 - E-mail montado via JavaScript (`EMAIL_PARTS` em `js/main.js`), fora do HTML em texto puro.
 - Links do portfólio aceitam apenas `https://`.
 - Página Apoie orienta o visitante a conferir o nome do recebedor no app do banco.
+- Política de privacidade em `privacidade.html`.
 
-> Ao adicionar um recurso externo novo (imagem, vídeo, script), libere o domínio na CSP de **todas** as páginas e no `_headers`, senão o navegador bloqueia.
+**CSP e Google AdSense**
+
+- As páginas não definem CSP. O AdSense recomenda uma CSP estrita com nonce aleatório por resposta; GitHub Pages não gera esse nonce por ser hospedagem estática. A integração do AdSense não está ativa no repositório.
+- Se a hospedagem mudar para um servidor capaz de gerar nonce por resposta, configure a CSP estrita e aplique o mesmo nonce a todos os scripts, conforme a documentação atual do AdSense.
+- Ao adicionar outros recursos externos, revise a política de privacidade e os cabeçalhos da hospedagem.
+- Depois de criar a conta AdSense, publique o `ads.txt` na raiz apenas com os dados fornecidos pela conta; não há identificador de publisher disponível para gerar esse arquivo agora.
+- Depois de comprar o domínio, configure-o em _Settings → Pages_, ajuste o DNS conforme as instruções do GitHub e ative _Enforce HTTPS_. O domínio ainda não foi definido, então não há `CNAME` no repositório. Atualize também as URLs `canonical` e `og:url` dos posts e do modelo, que hoje apontam para `brunohcs.github.io`.
 
 **Faça no GitHub (não dá para fazer via código)**
 

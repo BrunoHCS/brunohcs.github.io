@@ -1,6 +1,7 @@
 # Cabeçalhos de segurança — lido por Cloudflare Pages e Netlify (o GitHub Pages ignora este arquivo).
+# A CSP foi removida porque o AdSense exige nonce aleatório por resposta quando há CSP;
+# GitHub Pages não permite gerá-lo. A CSP não está ativa neste site.
 /*
-  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' https://i.ytimg.com; frame-src https://www.youtube-nocookie.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
