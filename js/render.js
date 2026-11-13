@@ -71,7 +71,13 @@ export function renderPost(post, basePath = '') {
 export function renderProject(project) {
   const node = cloneTemplate('tpl-project');
   const link = node.querySelector('.card-link');
-  link.href = safeExternalUrl(project.url);
+  if (project.url.startsWith('/')) {
+    link.href = project.url;
+    link.removeAttribute('target');
+    link.removeAttribute('rel');
+  } else {
+    link.href = safeExternalUrl(project.url);
+  }
   link.textContent = project.title;
   setText(node, '.project-kind', project.kind);
   setText(node, '.project-desc', project.description);

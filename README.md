@@ -7,6 +7,7 @@ Site pessoal (blog + portfólio) feito só com **HTML, CSS e JavaScript**, sem f
 | Caminho               | O que é                                                               |
 | --------------------- | --------------------------------------------------------------------- |
 | `index.html`          | Home: hero, temas, vídeos, posts recentes, portfólio, sobre e contato |
+| `estudos/`            | App de estudos com cursos, progresso e Pomodoro                   |
 | `blog.html`           | Lista de posts com busca e filtro por tag                             |
 | `apoie.html`          | Página de apoio via Pix (QR Code + chave)                             |
 | `privacidade.html`    | Política de privacidade do site                                        |
@@ -38,7 +39,7 @@ python3 -m http.server 8000
 
    ```bash
    git init
-   git add index.html blog.html apoie.html 404.html README.md _headers assets css js posts
+   git add index.html blog.html apoie.html 404.html README.md _headers assets css js posts estudos
    git commit -m "feat: primeira versão do site"
    git branch -M main
    git remote add origin git@github.com:SEU-USUARIO/SEU-REPO.git
