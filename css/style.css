@@ -65,21 +65,21 @@
 
 [data-theme='light'] {
   color-scheme: light;
-  --color-bg: #f3f6fa;
-  --color-bg-elev: #ffffff;
-  --color-surface: #e9eff6;
-  --color-line: #d4dde8;
-  --color-line-strong: #b7c5d6;
-  --color-text: #0b1119;
-  --color-muted: #4a5b70;
+  --color-bg: #edf2f4;
+  --color-bg-elev: #f3f6f7;
+  --color-surface: #e3ebef;
+  --color-line: #cfdbe1;
+  --color-line-strong: #b7c8d1;
+  --color-text: #15232c;
+  --color-muted: #56636b;
   --color-accent: #0068b5;
   --color-accent-strong: #004f8a;
   --color-accent-soft: rgba(0, 104, 181, 0.09);
   --color-on-accent: #ffffff;
   --color-ok: #0f7a52;
-  --color-grid: rgba(11, 17, 25, 0.045);
-  --shadow-card: 0 18px 40px -28px rgba(11, 17, 25, 0.35);
-  --shadow-glow: 0 30px 70px -35px rgba(0, 104, 181, 0.45);
+  --color-grid: rgba(21, 35, 44, 0.045);
+  --shadow-card: 0 18px 40px -28px rgba(32, 54, 66, 0.24);
+  --shadow-glow: 0 30px 70px -35px rgba(0, 104, 181, 0.35);
 }
 
 /* =========================================================
@@ -327,7 +327,7 @@ ol[class] {
   border-color: var(--color-accent);
 }
 
-@media (min-width: 52rem) {
+@media (min-width: 64rem) {
   .nav-toggle {
     display: none;
   }

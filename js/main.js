@@ -5,12 +5,18 @@ function setupThemeToggle() {
   if (!toggle) return;
   const root = document.documentElement;
   const syncPressed = () => toggle.setAttribute('aria-pressed', String(root.dataset.theme === 'light'));
+  const syncThemeColor = () => {
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+    if (themeColor) themeColor.content = root.dataset.theme === 'light' ? '#edf2f4' : '#0b1119';
+  };
 
   syncPressed();
+  syncThemeColor();
   toggle.addEventListener('click', () => {
     root.dataset.theme = root.dataset.theme === 'light' ? 'dark' : 'light';
     localStorage.setItem(THEME_STORAGE_KEY, root.dataset.theme);
     syncPressed();
+    syncThemeColor();
   });
 }
 
