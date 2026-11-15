@@ -16,13 +16,6 @@ export const projects = [
     cta: 'Assistir no YouTube',
   },
   {
-    kind: 'Vídeo',
-    title: 'Currículo que passa no ATS',
-    description: 'O que é ATS, erros que eliminam candidatos, LinkedIn que gera entrevistas e um modelo de currículo gratuito.',
-    url: 'https://www.youtube.com/watch?v=7ZAzE5__Cec',
-    cta: 'Ver o vídeo principal',
-  },
-  {
     kind: 'Comunidade',
     title: 'Dicas rápidas no Instagram',
     description: 'Conteúdo curto sobre carreira em TI, bastidores do trabalho e respostas às dúvidas de quem me acompanha.',
@@ -34,13 +27,14 @@ export const projects = [
 export const toolbox = [
   '.NET',
   'C#',
+  'Linux',
+  'Observabilidade',
+  'Docker',
+  'Cloud',
+  'Git',
+  'CI/CD',
   'SQL Server',
   'PostgreSQL',
-  'Linux',
-  'Git',
-  'n8n',
-  'Docker',
-  'CI/CD',
-  'Cloud',
-  'Observabilidade',
+  'n8n',  
+  'IA'
 ];

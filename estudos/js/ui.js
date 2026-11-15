@@ -7,6 +7,8 @@ function icon(name) {
   };
   return `<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">${paths[name]}</svg>`;
 }
+const collapsedCourses = new Set();
+const expandedCourses = new Set();
 function updateSummary() {
   const total = videos.length;
   const watched = videos.filter(video => video.watched).length;
@@ -71,10 +73,10 @@ function render() {
     return `<article class="video-card ${video.watched ? 'is-watched' : ''}" data-id="${escapeHtml(video.id)}">
       <label class="check-wrap"><span class="sr-only">Marcar ${escapeHtml(video.title)} como assistida</span><input type="checkbox" data-action="toggle" ${video.watched ? 'checked' : ''}><span class="checkmark"></span></label>
       <div class="video-copy"><h3 class="video-title">${escapeHtml(video.title)}</h3>${video.notes ? `<p class="video-notes">${escapeHtml(video.notes)}</p>` : ''}</div>
-      <div class="video-actions">${reorder}${link ? `<a class="watch-link" href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer" aria-label="Abrir ${escapeHtml(video.title)} no Telegram" title="Abrir aula">${icon('open')}</a>` : ''}<button class="icon-button" type="button" data-action="edit" aria-label="Editar ${escapeHtml(video.title)}" title="Editar aula">${icon('edit')}</button><button class="icon-button" type="button" data-action="delete" aria-label="Apagar ${escapeHtml(video.title)}" title="Apagar aula">${icon('delete')}</button></div>
+      <div class="video-actions">${reorder}${link ? `<a class="watch-link" href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer" aria-label="Abrir ${escapeHtml(video.title)} aula" title="Abrir aula">${icon('open')}</a>` : ''}<button class="icon-button" type="button" data-action="edit" aria-label="Editar ${escapeHtml(video.title)}" title="Editar aula">${icon('edit')}</button><button class="icon-button" type="button" data-action="delete" aria-label="Apagar ${escapeHtml(video.title)}" title="Apagar aula">${icon('delete')}</button></div>
     </article>`;
   };
-  list.innerHTML = orderedCourseIds.map(courseId => {
+  list.innerHTML = orderedCourseIds.map((courseId, courseIndex) => {
     const course = getCourseById(courseId);
     const courseVideos = visibleByCourse.get(courseId).sort((a, b) => (Number(a.order) || 0) - (Number(b.order) || 0));
     const moduleMap = new Map();
@@ -100,7 +102,12 @@ function render() {
     const completed = allCourseVideos.filter(video => video.watched).length;
     const percent = allCourseVideos.length ? Math.round((completed / allCourseVideos.length) * 100) : 0;
     const progressMarkup = course ? `<span class="course-progress" aria-label="${percent}% concluído, ${completed} de ${allCourseVideos.length} aulas"><strong>${percent}%</strong><span class="course-progress-track" role="progressbar" aria-label="Progresso de ${escapeHtml(label)}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${percent}"><span class="course-progress-fill" style="display:block;width:${percent}%"></span></span></span>` : '';
-    return `<section class="course-group"><header class="course-group-heading"><h3>${escapeHtml(label)}</h3><div class="course-group-meta">${progressMarkup}<span>${allCourseVideos.length} ${allCourseVideos.length === 1 ? 'aula' : 'aulas'}</span>${rename}</div></header>${moduleMarkup}</section>`;
+    const hasActiveFilter = Boolean(query) || mode !== 'all' || selectedCourse !== 'all';
+    const autoCollapsed = allCourseVideos.length >= 4 && !hasActiveFilter;
+    const collapsed = collapsedCourses.has(courseId) || (autoCollapsed && !expandedCourses.has(courseId));
+    const contentId = `course-lessons-${courseIndex}`;
+    const toggleLabel = `${collapsed ? 'Expandir' : 'Recolher'} aulas de ${label}`;
+    return `<section class="course-group${collapsed ? ' is-collapsed' : ''}" data-course-id="${escapeHtml(courseId)}"><header class="course-group-heading"><h3><button class="course-toggle" type="button" data-action="toggle-course" data-course-id="${escapeHtml(courseId)}" aria-expanded="${!collapsed}" aria-controls="${contentId}" aria-label="${escapeHtml(toggleLabel)}"><span class="course-toggle-icon" aria-hidden="true"></span><span class="course-toggle-label">${escapeHtml(label)}</span></button></h3><div class="course-group-meta">${progressMarkup}<span>${allCourseVideos.length} ${allCourseVideos.length === 1 ? 'aula' : 'aulas'}</span>${rename}</div></header><div class="course-group-content" id="${contentId}">${moduleMarkup}</div></section>`;
   }).join('');
 }
 function resetForm(courseId = '') {
@@ -113,7 +120,7 @@ function resetForm(courseId = '') {
 function validFormUrl(value) {
   if (!value.trim()) return '';
   const link = safeLink(value.trim());
-  if (!link) throw new Error('Use um link http, https ou Telegram válido.');
+  if (!link) throw new Error('Use um link http ou https válido.');
   return link;
 }
 
@@ -176,6 +183,23 @@ function bindUiEvents() {
   list.addEventListener('click', event => {
     const button = event.target.closest('[data-action]');
     if (!button || button.dataset.action === 'toggle') return;
+    if (button.dataset.action === 'toggle-course') {
+      const courseId = button.dataset.courseId;
+      const collapsed = button.getAttribute('aria-expanded') === 'true';
+      if (collapsed) {
+        collapsedCourses.add(courseId);
+        expandedCourses.delete(courseId);
+      } else {
+        collapsedCourses.delete(courseId);
+        expandedCourses.add(courseId);
+      }
+      const group = button.closest('.course-group');
+      group.classList.toggle('is-collapsed', collapsed);
+      button.setAttribute('aria-expanded', String(!collapsed));
+      const courseName = button.querySelector('.course-toggle-label').textContent;
+      button.setAttribute('aria-label', `${collapsed ? 'Expandir' : 'Recolher'} aulas de ${courseName}`);
+      return;
+    }
     if (button.dataset.action === 'rename-course') { renameCourse(button.dataset.courseId); return; }
     if (button.dataset.action === 'move-module-up' || button.dataset.action === 'move-module-down') {
       moveModule(button.dataset.courseId, button.dataset.module, button.dataset.action.endsWith('up') ? -1 : 1); return;

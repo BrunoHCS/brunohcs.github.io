@@ -1,4 +1,4 @@
-const STORAGE_KEY = 'video-aulas-telegram-v1';
+const STORAGE_KEY = 'video-aulas-v1';
 const COURSES_KEY = 'video-aulas-courses-v1';
 const POMODORO_KEY = 'video-aulas-pomodoro-v1';
 const FOCUS_TOTALS_KEY = 'video-aulas-focus-totals-v1';

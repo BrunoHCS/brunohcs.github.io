@@ -9,7 +9,7 @@
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/fonts.css">
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="assets/css/app.css?v=mobile-label-3-data-tools-1">
   <script src="../js/theme-init.js"></script>
   <script type="module" src="../js/main.js"></script>
 </head>
@@ -108,8 +108,8 @@
         <form id="video-form">
           <label class="field"><span for="course">Curso *</span><div class="course-choice-row"><select id="course" name="courseId" required><option value="">Selecione ou crie um curso</option></select><button class="new-course-button" id="new-course-button" type="button">+ Novo</button></div></label>
           <label class="field"><span for="title">Título da aula *</span><input id="title" name="title" required maxlength="180" placeholder="Ex.: Introdução ao módulo 1"></label>
-          <label class="field"><span for="module">Módulo (opcional)</span><input id="module" name="module" maxlength="80" placeholder="Ex.: Módulo 1"></label>
-          <label class="field"><span for="url">Link da aula</span><input id="url" name="url" type="url" maxlength="500" placeholder="https://example.com..."></label>
+          <label class="field"><span for="module">Módulo</span><input id="module" name="module" maxlength="80" placeholder="Ex.: Módulo 1"></label>
+          <label class="field"><span for="url">Link da aula</span><input id="url" name="url" type="url" maxlength="500" placeholder="Ex.: https://example.com..."></label>
           <label class="field"><span for="notes">Anotações</span><textarea id="notes" name="notes" maxlength="1000" placeholder="Pontos importantes, dúvidas e mais..."></textarea></label>
           <button class="primary-button" type="submit"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span id="submit-label">Adicionar à lista</span></button>
         </form>
@@ -128,15 +128,32 @@
       </section>
     </div>
 
-    <footer class="data-tools">
-      <span class="data-note">Seu progresso fica salvo neste navegador.</span>
-      <div class="tool-actions">
-        <button class="text-button" id="export-button" type="button">Exportar estudos</button>
-        <button class="text-button" id="import-button" type="button">Importar estudos</button>
-        <button class="text-button" id="template-button" type="button">Baixar modelo</button>
-        <button class="text-button danger" id="clear-button" type="button">Apagar lista</button>
-        <input class="sr-only" id="import-file" type="file" accept="application/json,.json">
+    <footer class="data-tools" aria-labelledby="data-tools-heading">
+      <div class="data-tools-heading">
+        <h2 id="data-tools-heading">Gerenciar seus estudos</h2>
+        <p class="data-note">Seus dados ficam salvos neste navegador. A cópia inclui cursos e aulas, mas não o progresso, o tempo focado ou as configurações do Pomodoro.</p>
       </div>
+      <div class="tool-actions" aria-label="Cópia e importação de estudos">
+        <button class="text-button" id="export-button" type="button">
+          <span class="text-button-label">Exportar cursos e aulas</span>
+          <span class="text-button-help">Baixe uma cópia em JSON para guardar.</span>
+        </button>
+        <button class="text-button" id="import-button" type="button">
+          <span class="text-button-label">Importar arquivo JSON</span>
+          <span class="text-button-help">Adicione cursos e aulas sem substituir sua lista.</span>
+        </button>
+        <button class="text-button" id="template-button" type="button">
+          <span class="text-button-label">Baixar modelo JSON</span>
+          <span class="text-button-help">Use o exemplo como base para importar.</span>
+        </button>
+      </div>
+      <div class="data-tools-danger">
+        <button class="text-button danger" id="clear-button" type="button">
+          <span class="text-button-label">Apagar todos os estudos</span>
+          <span class="text-button-help">Remove cursos, aulas e tempo focado. As configurações do Pomodoro são mantidas.</span>
+        </button>
+      </div>
+      <input class="sr-only" id="import-file" type="file" accept="application/json,.json">
     </footer>
   </main>
   <footer class="site-footer">
@@ -162,7 +179,7 @@
   <script src="js/utilities.js" defer></script>
   <script src="js/sharing.js" defer></script>
   <script src="js/pomodoro.js" defer></script>
-  <script src="js/ui.js" defer></script>
+  <script src="js/ui.js?v=course-collapse-2" defer></script>
   <script src="js/backup.js" defer></script>
   <script src="js/theme-sync.js" defer></script>
   <script src="js/app.js" defer></script>
